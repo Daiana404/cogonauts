@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lilita+One&family=Londrina+Solid:wght@100;300;400;900&family=Press+Start+2P&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.carousel-cogos {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f24646;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.carousel-cogos--flidas {
+  position: relative;
+  background: radial-gradient(circle, #ffb07c 0%, #e97528 100%); }
+  .carousel-cogos--flidas #flidas {
+    width: 300px;
+    position: absolute;
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+.carousel-cogos--koko {
+  position: relative;
+  background: radial-gradient(circle, #b1f599 0%, #73c557 100%); }
+  .carousel-cogos--koko #koko {
+    width: 300px;
+    position: absolute;
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+.carousel-cogos--baku {
+  position: relative;
+  background: radial-gradient(circle, #ff7e7e 0%, #ef3f3f 100%); }
+  .carousel-cogos--baku #baku {
+    width: 300px;
+    position: absolute;
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+.carousel-cogos--skup {
+  position: relative;
+  background: radial-gradient(circle, #ffc2d0 0%, #ff84a0 100%); }
+  .carousel-cogos--skup #skup {
+    width: 300px;
+    position: absolute;
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+.carousel-cogos--donn {
+  position: relative;
+  background: radial-gradient(circle, #dec2ff 0%, #a078d0 100%); }
+  .carousel-cogos--donn #donn {
+    width: 300px;
+    position: absolute;
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+.productos__grid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 350px 350px; }
+  .productos__grid .productos__grid--cogos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .productos__grid .productos__grid--cogos .cogos__before {
+      height: 250px;
+      transform: rotate(-30deg); }
+    .productos__grid .productos__grid--cogos .cogos__after {
+      display: none; }
+  .productos__grid .productos__grid--cogos:hover {
+    cursor: pointer; }
+    .productos__grid .productos__grid--cogos:hover .cogos__before {
+      display: none; }
+    .productos__grid .productos__grid--cogos:hover .cogos__after {
+      height: 300px;
+      display: initial; }
+
+@keyframes flotando {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(-5px, 30px); }
+  100% {
+    transform: translate(0, 0); } }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  font-family: 'Rubik'; }
+
+body {
+  min-height: 100vh;
+  background-color: black !important; }
+  body .height-seccion {
+    height: 100vh; }
+
+.navegador-cogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+  padding: 0 30px 0 30px;
+  box-sizing: border-box;
+  /* li:hover{
+        background-color: white;
+        border-radius: 50px;
+    } */
+  /* .navegador-cogo__carrito:hover{
+        background-color: white;
+        border-radius: 50%;
+    } */ }
+  .navegador-cogo .navegador-cogo__lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; }
+    .navegador-cogo .navegador-cogo__lista .logo-cogonauts {
+      height: 50px; }
+      .navegador-cogo .navegador-cogo__lista .logo-cogonauts .svg-color-logo {
+        fill: white; }
+    .navegador-cogo .navegador-cogo__lista ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 55px;
+      margin: 0; }
+      .navegador-cogo .navegador-cogo__lista ul .lista__item {
+        width: 100px;
+        padding: 5px;
+        text-align: center;
+        transition: 500ms; }
+  .navegador-cogo a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100;
+    transition: 500ms; }
+  .navegador-cogo li:hover a {
+    color: black;
+    text-decoration: none; }
+  .navegador-cogo .navegador-cogo__carrito {
+    height: 40px;
+    width: 40px;
+    transition: 500ms; }
+  .navegador-cogo .navegador-cogo__carrito a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .navegador-cogo .carrito__icono {
+    height: 20px;
+    fill: white;
+    transition: 500ms; }
+  .navegador-cogo .navegador-cogo__carrito:hover a .carrito__icono {
+    fill: black; }

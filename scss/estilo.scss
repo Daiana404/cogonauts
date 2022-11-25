@@ -1,0 +1,115 @@
+@import "./components/mixin";
+
+@import "./vars/medidas";
+@import "./vars/color";
+@import "./vars/fuente";
+@import "./vars/transition";
+
+@import "./components/slides";
+@import "./components/categoria-cogos";
+@import "./components/keyframes";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    
+    list-style: none;
+
+    font-family: 'Rubik';
+}
+body{
+    min-height: 100vh;
+    
+    .height-seccion{
+        height: 100vh;
+    }
+
+    background-color: black!important;
+}
+.navegador-cogo{
+    @include flex(row, space-between, center);
+    height: $nav-height;
+    width: 100%;
+    background-color: transparent;
+    
+    position: fixed;
+
+    z-index: 2;
+    
+    @include padding(0, 30px, 0, 30px);
+
+    .navegador-cogo__lista{
+        @include flex(row, center, center);
+        gap: 10px;
+
+        .logo-cogonauts{
+            height: 50px;
+            
+            .svg-color-logo{
+                fill: white;
+            }
+        }
+        ul{
+            @include flex(row, center, center);
+            
+            height: $nav-height;
+            margin: 0;
+            .lista__item{
+                width: 100px;
+                padding: 5px;
+                text-align: center;
+
+                transition: $time-transition;
+            }
+        }
+    }
+
+    a{
+        color: $general;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 100;
+
+        transition: $time-transition;
+    }
+    
+    /* li:hover{
+        background-color: white;
+        border-radius: 50px;
+    } */
+    li:hover a{
+        color: black;
+        text-decoration: none;
+    }
+
+    .navegador-cogo__carrito{
+        height: 40px;
+        width: 40px;
+        transition: $time-transition;
+    }
+    .navegador-cogo__carrito a{
+        
+        height: 100%;
+        width: 100%;
+        
+        @include flex(row, center, center);
+    }
+    /* .navegador-cogo__carrito:hover{
+        background-color: white;
+        border-radius: 50%;
+    } */
+    .carrito__icono{
+        height: 20px;
+        fill: white;
+        transition: $time-transition;
+    }
+    .navegador-cogo__carrito:hover a .carrito__icono{
+        fill: black;
+    }
+    
+
+}
+
+
