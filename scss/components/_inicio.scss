@@ -1,0 +1,103 @@
+$fondos:(
+    "flidas": $fondo-flidas,
+    "koko": $fondo-koko,
+    "baku": $fondo-baku,
+    "skup": $fondo-skup,
+    "donn": $fondo-donn,
+    "fixito": $fondo-fixito,
+    "unaki": $fondo-unaki
+);
+$colores:(
+    "flidas": rgb(235, 99, 21),
+    "koko": green,
+    "baku": rgb(204, 14, 14),
+    "skup": rgb(214, 24, 103),
+    "donn": rgb(159, 12, 196),
+    "fixito": rgb(241, 120, 21),
+    "unaki": rgb(34, 136, 204)
+);
+
+.carousel-cogos{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 30vw 20vw;
+    grid-template-rows: 300px 100px;
+    grid-template-areas: "a1 a2"
+                         "a1 a3";
+    align-content: center;
+    justify-content: center;
+
+    .carousel-cogos__boton{
+        height: 40px;
+        width: 100%;
+        a{
+            @include flex(row, center, center);
+            height: 100%;
+            width: 100%;
+
+            background-color: black;
+            border-radius: 10px;
+
+            font-family: 'Londrina Solid';
+            font-size: 1.5em;
+            text-decoration: none;
+            color: white;
+
+            cursor: pointer;
+        }
+    }
+    .carousel-cogos__description{
+            
+        @include flex(column, flex-start, center);
+        max-width: 250px;
+        height: 50vh;
+        a{
+            text-decoration: none;
+        }
+        span{
+            text-align: center;
+            font-family: 'Londrina Solid';
+            font-size: 8em;
+            color: rgb(0, 0, 0);
+            text-shadow: 6px 6px 0 rgb(255, 255, 255);
+            transition: 0.5s;
+        }
+        @each $name, $color in $colores{
+            .description--#{$name}{
+                position: relative;
+                top: -23px;
+                font-size: 1.5em;
+                color: $color;
+                font-weight: 200;
+                font-family: 'Amatic SC';
+                display: inline-block;
+            }
+        }
+        
+
+    }
+
+}
+@each $nombre, $fondo in $fondos {
+    .carousel-cogos--#{$nombre}{
+        position: relative;
+        background: $fondo;
+
+        ##{$nombre}{
+            grid-area: a1;
+        }
+
+        ##{$nombre}{
+            min-width: 200px;
+            width: 25vw;/* 
+            position: absolute; */
+            animation-name: flotando;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out ;
+            
+        }
+    }
+}

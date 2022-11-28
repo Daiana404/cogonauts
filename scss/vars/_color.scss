@@ -3,7 +3,11 @@ $fondo-skup: radial-gradient(circle, rgb(255, 194, 208) 0%, rgba(255,132,160,1) 
 $fondo-baku: radial-gradient(circle, rgb(255, 126, 126) 0%, rgba(239,63,63,1) 100%);
 $fondo-koko: radial-gradient(circle, rgb(177, 245, 153) 0%, rgba(115,197,87,1) 100%);
 $fondo-donn: radial-gradient(circle, rgb(222, 194, 255) 0%, rgba(160,120,208,1) 100%);
-$fondo-flidas: radial-gradient(circle, rgb(255, 176, 124) 0%, rgba(233,117,40,1) 100%);
+$fondo-flidas: radial-gradient(circle, rgb(255, 176, 124) 0%, rgba(233,117,40,1) 100%); 
+$fondo-unaki: radial-gradient(circle, rgba(139,228,255,1) 0%, rgba(0,196,255,1) 100%);
+$fondo-fixito: radial-gradient(circle, rgba(255,239,154,1) 0%, rgba(238,206,39,1) 100%);
+
+$fondo-general: #f0dac8;
 
 $general: white;
 
@@ -18,3 +22,5 @@ $naranja: #fd4111;
 $verde: #81b23f;
 
 $rosa: #fe76a6;
+
+$gradiente: linear-gradient(42deg, rgba(251,95,174,1) 0%, rgba(233,117,40,1) 100%);

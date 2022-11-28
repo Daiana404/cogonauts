@@ -1,0 +1,76 @@
+.nosotros{
+    background-color: pink;
+
+    .nosotros__info{
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        grid-template-rows: 60vh;
+        align-content: center;
+        justify-content: center;
+        column-gap: 50px;
+
+        grid-template-areas: "a1 a2";
+        .persona-1{
+            background-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.363);
+            border-radius: 10%;
+            @include flex(column, center, center);
+            img{
+                width: 12vw;
+                height: 12vw;
+                border-radius: 50%;
+                object-fit: cover;
+                grid-area: a1;
+            }
+            .texto{
+                grid-area: a2;
+                .texto__nombre{
+                    padding-top: 20px;
+                    font-family: 'Londrina Solid';
+                    font-size: $letra-nombres;
+                    color: rgb(248, 153, 74);
+                    text-shadow: 2px 3px 0 black;
+                }
+                span{
+                    font-family: 'Amatic SC';
+                    font-size: $letra-subtitulo;
+                    color: rgb(0, 0, 0);
+                }
+                .texto__mensaje{
+                    font-size: $letra-normal;
+                    font-weight: 300;
+                    color: black;
+                }
+            }
+        }     
+        .persona-2{
+            @extend .persona-1;
+        }                      
+    }
+
+    .nosotros__youtube{
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 80px 1fr;
+        grid-template-areas: "a1 a1"
+                             "a2 a3";
+        row-gap: 50px;
+        align-content: center;
+        justify-content: center;                             
+
+        padding: 5% 0 10% 0;
+        h2{
+            grid-area: a1;
+            text-align: center;
+            color: black;
+            font-size: $letra-titulo;
+            font-family: 'Londrina Solid';
+        }
+        iframe{
+            display: flex;
+            justify-items: center;
+            width: 90%;
+        }
+    }
+
+}

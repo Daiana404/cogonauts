@@ -1,19 +1,116 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lilita+One&family=Londrina+Solid:wght@100;300;400;900&family=Press+Start+2P&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Londrina+Solid:wght@100;300;400;900&family=Press+Start+2P&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+/* Amatic SC; Londrina Solid; Press Start 2P */
 .carousel-cogos {
   width: 100vw;
   height: 100vh;
-  background-color: #f24646;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
+  display: grid;
+  grid-template-columns: 30vw 20vw;
+  grid-template-rows: 300px 100px;
+  grid-template-areas: "a1 a2" "a1 a3";
+  align-content: center;
+  justify-content: center; }
+  .carousel-cogos .carousel-cogos__boton {
+    height: 40px;
+    width: 100%; }
+    .carousel-cogos .carousel-cogos__boton a {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      border-radius: 10px;
+      font-family: 'Londrina Solid';
+      font-size: 1.5em;
+      text-decoration: none;
+      color: white;
+      cursor: pointer; }
+  .carousel-cogos .carousel-cogos__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 250px;
+    height: 50vh; }
+    .carousel-cogos .carousel-cogos__description a {
+      text-decoration: none; }
+    .carousel-cogos .carousel-cogos__description span {
+      text-align: center;
+      font-family: 'Londrina Solid';
+      font-size: 8em;
+      color: black;
+      text-shadow: 6px 6px 0 white;
+      transition: 0.5s; }
+    .carousel-cogos .carousel-cogos__description .description--flidas {
+      position: relative;
+      top: -23px;
+      font-size: 1.5em;
+      color: #eb6315;
+      font-weight: 200;
+      font-family: 'Amatic SC';
+      display: inline-block; }
+    .carousel-cogos .carousel-cogos__description .description--koko {
+      position: relative;
+      top: -23px;
+      font-size: 1.5em;
+      color: green;
+      font-weight: 200;
+      font-family: 'Amatic SC';
+      display: inline-block; }
+    .carousel-cogos .carousel-cogos__description .description--baku {
+      position: relative;
+      top: -23px;
+      font-size: 1.5em;
+      color: #cc0e0e;
+      font-weight: 200;
+      font-family: 'Amatic SC';
+      display: inline-block; }
+    .carousel-cogos .carousel-cogos__description .description--skup {
+      position: relative;
+      top: -23px;
+      font-size: 1.5em;
+      color: #d61867;
+      font-weight: 200;
+      font-family: 'Amatic SC';
+      display: inline-block; }
+    .carousel-cogos .carousel-cogos__description .description--donn {
+      position: relative;
+      top: -23px;
+      font-size: 1.5em;
+      color: #9f0cc4;
+      font-weight: 200;
+      font-family: 'Amatic SC';
+      display: inline-block; }
+    .carousel-cogos .carousel-cogos__description .description--fixito {
+      position: relative;
+      top: -23px;
+      font-size: 1.5em;
+      color: #f17815;
+      font-weight: 200;
+      font-family: 'Amatic SC';
+      display: inline-block; }
+    .carousel-cogos .carousel-cogos__description .description--unaki {
+      position: relative;
+      top: -23px;
+      font-size: 1.5em;
+      color: #2288cc;
+      font-weight: 200;
+      font-family: 'Amatic SC';
+      display: inline-block; }
 
 .carousel-cogos--flidas {
   position: relative;
   background: radial-gradient(circle, #ffb07c 0%, #e97528 100%); }
   .carousel-cogos--flidas #flidas {
-    width: 300px;
-    position: absolute;
+    grid-area: a1; }
+  .carousel-cogos--flidas #flidas {
+    min-width: 200px;
+    width: 25vw;
+    /* 
+            position: absolute; */
     animation-name: flotando;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -23,8 +120,12 @@
   position: relative;
   background: radial-gradient(circle, #b1f599 0%, #73c557 100%); }
   .carousel-cogos--koko #koko {
-    width: 300px;
-    position: absolute;
+    grid-area: a1; }
+  .carousel-cogos--koko #koko {
+    min-width: 200px;
+    width: 25vw;
+    /* 
+            position: absolute; */
     animation-name: flotando;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -34,8 +135,12 @@
   position: relative;
   background: radial-gradient(circle, #ff7e7e 0%, #ef3f3f 100%); }
   .carousel-cogos--baku #baku {
-    width: 300px;
-    position: absolute;
+    grid-area: a1; }
+  .carousel-cogos--baku #baku {
+    min-width: 200px;
+    width: 25vw;
+    /* 
+            position: absolute; */
     animation-name: flotando;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -45,8 +150,12 @@
   position: relative;
   background: radial-gradient(circle, #ffc2d0 0%, #ff84a0 100%); }
   .carousel-cogos--skup #skup {
-    width: 300px;
-    position: absolute;
+    grid-area: a1; }
+  .carousel-cogos--skup #skup {
+    min-width: 200px;
+    width: 25vw;
+    /* 
+            position: absolute; */
     animation-name: flotando;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -56,45 +165,254 @@
   position: relative;
   background: radial-gradient(circle, #dec2ff 0%, #a078d0 100%); }
   .carousel-cogos--donn #donn {
-    width: 300px;
-    position: absolute;
+    grid-area: a1; }
+  .carousel-cogos--donn #donn {
+    min-width: 200px;
+    width: 25vw;
+    /* 
+            position: absolute; */
     animation-name: flotando;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out; }
 
+.carousel-cogos--fixito {
+  position: relative;
+  background: radial-gradient(circle, #ffef9a 0%, #eece27 100%); }
+  .carousel-cogos--fixito #fixito {
+    grid-area: a1; }
+  .carousel-cogos--fixito #fixito {
+    min-width: 200px;
+    width: 25vw;
+    /* 
+            position: absolute; */
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+.carousel-cogos--unaki {
+  position: relative;
+  background: radial-gradient(circle, #8be4ff 0%, #00c4ff 100%); }
+  .carousel-cogos--unaki #unaki {
+    grid-area: a1; }
+  .carousel-cogos--unaki #unaki {
+    min-width: 200px;
+    width: 25vw;
+    /* 
+            position: absolute; */
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+.productos {
+  padding-bottom: 60px; }
+  .productos .titulo {
+    color: black; }
+
 .productos__grid {
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 350px 350px; }
-  .productos__grid .productos__grid--cogos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .productos__grid .productos__grid--cogos .cogos__before {
-      height: 250px;
-      transform: rotate(-30deg); }
-    .productos__grid .productos__grid--cogos .cogos__after {
-      display: none; }
-  .productos__grid .productos__grid--cogos:hover {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 350px 350px 350px;
+  grid-template-areas: "a1 a4 a2" "a1 a3 a2" "a5 a3 a6";
+  row-gap: 20px;
+  column-gap: 20px; }
+  .productos__grid .productos__grid-kits, .productos__grid .productos__grid-cogos, .productos__grid .productos__grid-minis, .productos__grid .productos__grid-bandejas, .productos__grid .productos__grid-pines {
+    position: relative;
     cursor: pointer; }
-    .productos__grid .productos__grid--cogos:hover .cogos__before {
-      display: none; }
-    .productos__grid .productos__grid--cogos:hover .cogos__after {
-      height: 300px;
-      display: initial; }
+    .productos__grid .productos__grid-kits .grid-kits__fondo, .productos__grid .productos__grid-cogos .grid-kits__fondo, .productos__grid .productos__grid-minis .grid-kits__fondo, .productos__grid .productos__grid-bandejas .grid-kits__fondo, .productos__grid .productos__grid-pines .grid-kits__fondo, .productos__grid .productos__grid-kits .productos__grid-cogos img, .productos__grid .productos__grid-cogos .productos__grid-kits img, .productos__grid .productos__grid-cogos img, .productos__grid .productos__grid-kits .productos__grid-minis img, .productos__grid .productos__grid-minis .productos__grid-kits img, .productos__grid .productos__grid-minis img, .productos__grid .productos__grid-kits .productos__grid-bandejas img, .productos__grid .productos__grid-bandejas .productos__grid-kits img, .productos__grid .productos__grid-bandejas img, .productos__grid .productos__grid-kits .productos__grid-pines img, .productos__grid .productos__grid-pines .productos__grid-kits img, .productos__grid .productos__grid-pines img {
+      filter: brightness(55%);
+      transition: 500ms;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom;
+      border-radius: 20px; }
+    .productos__grid .productos__grid-kits .enlace-titulo, .productos__grid .productos__grid-cogos .enlace-titulo, .productos__grid .productos__grid-minis .enlace-titulo, .productos__grid .productos__grid-bandejas .enlace-titulo, .productos__grid .productos__grid-pines .enlace-titulo, .productos__grid .productos__grid-kits .productos__grid-cogos a, .productos__grid .productos__grid-cogos .productos__grid-kits a, .productos__grid .productos__grid-cogos a, .productos__grid .productos__grid-kits .productos__grid-minis a, .productos__grid .productos__grid-minis .productos__grid-kits a, .productos__grid .productos__grid-minis a, .productos__grid .productos__grid-kits .productos__grid-bandejas a, .productos__grid .productos__grid-bandejas .productos__grid-kits a, .productos__grid .productos__grid-bandejas a, .productos__grid .productos__grid-kits .productos__grid-pines a, .productos__grid .productos__grid-pines .productos__grid-kits a, .productos__grid .productos__grid-pines a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none; }
+      .productos__grid .productos__grid-kits .enlace-titulo p, .productos__grid .productos__grid-cogos .enlace-titulo p, .productos__grid .productos__grid-minis .enlace-titulo p, .productos__grid .productos__grid-bandejas .enlace-titulo p, .productos__grid .productos__grid-pines .enlace-titulo p, .productos__grid .productos__grid-kits .productos__grid-cogos a p, .productos__grid .productos__grid-cogos .productos__grid-kits a p, .productos__grid .productos__grid-cogos a p, .productos__grid .productos__grid-kits .productos__grid-minis a p, .productos__grid .productos__grid-minis .productos__grid-kits a p, .productos__grid .productos__grid-cogos .productos__grid-minis a p, .productos__grid .productos__grid-minis .productos__grid-cogos a p, .productos__grid .productos__grid-minis a p, .productos__grid .productos__grid-kits .productos__grid-bandejas a p, .productos__grid .productos__grid-bandejas .productos__grid-kits a p, .productos__grid .productos__grid-cogos .productos__grid-bandejas a p, .productos__grid .productos__grid-bandejas .productos__grid-cogos a p, .productos__grid .productos__grid-minis .productos__grid-bandejas a p, .productos__grid .productos__grid-bandejas .productos__grid-minis a p, .productos__grid .productos__grid-bandejas a p, .productos__grid .productos__grid-kits .productos__grid-pines a p, .productos__grid .productos__grid-pines .productos__grid-kits a p, .productos__grid .productos__grid-cogos .productos__grid-pines a p, .productos__grid .productos__grid-pines .productos__grid-cogos a p, .productos__grid .productos__grid-minis .productos__grid-pines a p, .productos__grid .productos__grid-pines .productos__grid-minis a p, .productos__grid .productos__grid-bandejas .productos__grid-pines a p, .productos__grid .productos__grid-pines .productos__grid-bandejas a p, .productos__grid .productos__grid-pines a p {
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Londrina Solid';
+        font-size: 4.5em;
+        text-shadow: 6px 6px 0px black;
+        color: white;
+        transition: 500ms; }
+  .productos__grid .productos__grid-kits:hover .grid-kits__fondo, .productos__grid .productos__grid-cogos:hover .grid-kits__fondo, .productos__grid .productos__grid-minis:hover .grid-kits__fondo, .productos__grid .productos__grid-bandejas:hover .grid-kits__fondo, .productos__grid .productos__grid-pines:hover .grid-kits__fondo, .productos__grid .productos__grid-kits:hover .productos__grid-cogos img, .productos__grid .productos__grid-cogos .productos__grid-kits:hover img, .productos__grid .productos__grid-cogos:hover img, .productos__grid .productos__grid-kits:hover .productos__grid-minis img, .productos__grid .productos__grid-minis .productos__grid-kits:hover img, .productos__grid .productos__grid-minis:hover img, .productos__grid .productos__grid-kits:hover .productos__grid-bandejas img, .productos__grid .productos__grid-bandejas .productos__grid-kits:hover img, .productos__grid .productos__grid-bandejas:hover img, .productos__grid .productos__grid-kits:hover .productos__grid-pines img, .productos__grid .productos__grid-pines .productos__grid-kits:hover img, .productos__grid .productos__grid-pines:hover img {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    filter: brightness(80%); }
+  .productos__grid .productos__grid-kits:hover a p, .productos__grid .productos__grid-cogos:hover a p, .productos__grid .productos__grid-minis:hover a p, .productos__grid .productos__grid-bandejas:hover a p, .productos__grid .productos__grid-pines:hover a p {
+    transform: scale(1.03, 1.03); }
+  .productos__grid .combo--baku {
+    grid-area: a1; }
+  .productos__grid .combo--flidas {
+    grid-area: a3; }
+  .productos__grid .productos__grid-cogos {
+    grid-area: a2; }
+  .productos__grid .productos__grid-minis {
+    grid-area: a4; }
+  .productos__grid .productos__grid-bandejas {
+    grid-area: a5; }
+    .productos__grid .productos__grid-bandejas img {
+      object-position: center; }
+  .productos__grid .productos__grid-pines {
+    grid-area: a6; }
+    .productos__grid .productos__grid-pines img {
+      object-position: center; }
 
 @keyframes flotando {
   0% {
-    transform: translate(0, 0); }
+    transform: translate(0, -100px); }
   50% {
-    transform: translate(-5px, 30px); }
+    transform: translate(-10px, -50px); }
   100% {
-    transform: translate(0, 0); } }
+    transform: translate(0, -100px); } }
 
+.pie {
+  /* 
+    height: 250px; */
+  width: 100%;
+  background-color: Black !important;
+  position: relative;
+  padding: 30px 0 20px 0; }
+  .pie .pie-decoracion-top {
+    position: absolute;
+    height: 15%;
+    top: -14.5%;
+    width: 100%;
+    filter: brightness(0); }
+  .pie .pie__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    padding: 20px 0 20px 0; }
+    .pie .pie__logo svg {
+      height: 100px; }
+      .pie .pie__logo svg path {
+        fill: white; }
+  .pie .pie__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; }
+    .pie .pie__info ul li .iconos-pie {
+      width: 20px; }
+      .pie .pie__info ul li .iconos-pie g {
+        fill: white; }
+    .pie .pie__info ul li a {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100px;
+      text-decoration: none;
+      color: white;
+      font-size: 0.9em; }
+    .pie .pie__info ul li:hover a {
+      color: #fe76a6; }
+    .pie .pie__info ul li:hover svg path {
+      fill: #fe76a6; }
+  .pie .pie__creditos {
+    color: white;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 200;
+    text-transform: uppercase; }
+    .pie .pie__creditos p {
+      margin: 0;
+      padding: 5px 0 5px 0; }
+      .pie .pie__creditos p span {
+        text-transform: none;
+        font-style: italic; }
+
+.nosotros {
+  background-color: pink; }
+  .nosotros .nosotros__info {
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: 60vh;
+    align-content: center;
+    justify-content: center;
+    column-gap: 50px;
+    grid-template-areas: "a1 a2"; }
+    .nosotros .nosotros__info .persona-1, .nosotros .nosotros__info .persona-2 {
+      background-color: white;
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.363);
+      border-radius: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .nosotros .nosotros__info .persona-1 img, .nosotros .nosotros__info .persona-2 img {
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        object-fit: cover;
+        grid-area: a1; }
+      .nosotros .nosotros__info .persona-1 .texto, .nosotros .nosotros__info .persona-2 .texto {
+        grid-area: a2; }
+        .nosotros .nosotros__info .persona-1 .texto .texto__nombre, .nosotros .nosotros__info .persona-2 .texto .texto__nombre {
+          padding-top: 20px;
+          font-family: 'Londrina Solid';
+          font-size: calc(2em + 1.8vw);
+          color: #f8994a;
+          text-shadow: 2px 3px 0 black; }
+        .nosotros .nosotros__info .persona-1 .texto span, .nosotros .nosotros__info .persona-2 .texto span {
+          font-family: 'Amatic SC';
+          font-size: calc(1em + 0.8vw);
+          color: black; }
+        .nosotros .nosotros__info .persona-1 .texto .texto__mensaje, .nosotros .nosotros__info .persona-2 .texto .texto__mensaje {
+          font-size: calc(1em + 0.3vw);
+          font-weight: 300;
+          color: black; }
+  .nosotros .nosotros__youtube {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "a1 a1" "a2 a3";
+    row-gap: 50px;
+    align-content: center;
+    justify-content: center;
+    padding: 5% 0 10% 0; }
+    .nosotros .nosotros__youtube h2 {
+      grid-area: a1;
+      text-align: center;
+      color: black;
+      font-size: calc(1rem + 2vw);
+      font-family: 'Londrina Solid'; }
+    .nosotros .nosotros__youtube iframe {
+      display: flex;
+      justify-items: center;
+      width: 90%; }
+
+/* scroll */
+html {
+  scroll-behavior: smooth; }
+
+/* configuración general */
 * {
   padding: 0;
   margin: 0;
@@ -102,12 +420,14 @@
   list-style: none;
   font-family: 'Rubik'; }
 
+/* configuración para páginas que deben ser vistas en toda la pantalla */
 body {
-  min-height: 100vh;
-  background-color: black !important; }
+  width: 100%;
+  background-color: white !important; }
   body .height-seccion {
     height: 100vh; }
 
+/* configuración para el navegador */
 .navegador-cogo {
   display: flex;
   flex-direction: row;
@@ -176,3 +496,32 @@ body {
     transition: 500ms; }
   .navegador-cogo .navegador-cogo__carrito:hover a .carrito__icono {
     fill: black; }
+
+/* titulos para las secciones */
+.principal {
+  /* solo la seccion youtube tendrá padding por la superposición de la decoración */ }
+  .principal section .titulo {
+    padding: 100px 0 30px 0;
+    text-align: center;
+    font-family: 'Londrina Solid';
+    color: black;
+    font-size: calc(1rem + 2vw);
+    text-transform: uppercase; }
+  .principal .nosotros {
+    padding-top: 25px;
+    color: white; }
+
+/* editar el detalle curvo para separar cada sección */
+.principal .productos {
+  position: relative; }
+  .principal .productos .main-decoracion-top {
+    width: 100%;
+    height: 6%;
+    position: absolute;
+    top: -5.9%; }
+  .principal .productos .main-decoracion-bottom {
+    width: 100%;
+    height: 8%;
+    position: absolute;
+    bottom: -7.9%;
+    transform: scale(-1, -1); }

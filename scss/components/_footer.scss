@@ -1,0 +1,78 @@
+.pie{/* 
+    height: 250px; */
+    width: 100%;
+    background-color: Black!important;
+    position: relative;
+    padding: 30px 0 20px 0;
+
+    .pie-decoracion-top{
+        position: absolute;
+        height: 15%;
+        top: -14.5%;
+        width: 100%;
+        filter: brightness(0);
+    }    
+    .pie__logo{
+            @include flex(row, center, center);
+            
+            box-sizing: content-box;
+            padding: 20px 0 20px 0;
+
+            svg{
+                height: 100px;
+                path{
+                    fill: white;
+                }
+            }
+        }
+    .pie__info{
+            @include flex(row, center, center);
+            padding-top: 20px ;
+            ul li{
+                
+                .iconos-pie{
+                    width: 20px;
+                    g{
+                        fill: white;
+                    }
+                }
+                a{
+                    @include flex(row, space-between, center);
+                    width: 100px;
+                    
+                    text-decoration: none;
+                    color: white;
+                    font-size: 0.9em;
+                }
+            }
+            ul li:hover{
+                a{
+                    color: $rosa;
+                }
+                svg path{
+                    fill: $rosa; 
+                }
+                
+            }
+    }
+
+    .pie__creditos{
+
+        color: white;
+        text-align: center;
+        font-size: 0.7em;
+        font-weight: 200;
+        
+        text-transform: uppercase;
+        
+        p {
+            margin: 0;
+
+            padding: 5px 0 5px 0;
+            span{
+            text-transform: none;
+            font-style: italic;}
+        }
+
+    }
+}
